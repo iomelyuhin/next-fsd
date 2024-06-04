@@ -1,8 +1,8 @@
-import styles from "./NotFound.module.scss";
+import cls from "./NotFound.module.scss";
 
 export const NotFound = async () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={cls.wrapper}>
       <h2>{"notFound"}</h2>
     </div>
   );

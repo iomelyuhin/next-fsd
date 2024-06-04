@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import {} from "next/navigation";
 import { GlobalLayout } from "widgets/layouts";
-import { LanguageEnum } from "@entities/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,15 +12,12 @@ export const metadata: Metadata = {
 
 type Props = Readonly<{
   children: React.ReactNode;
-  params: { lang: LanguageEnum };
 }>;
 
-export default function RootLayout({ children, params: { lang } }: Props) {
+export default function RootLayout({ children }: Props) {
   return (
-    <html lang={lang}>
-      <GlobalLayout lang={lang} className={inter.className}>
-        {children}
-      </GlobalLayout>
+    <html>
+      <GlobalLayout className={inter.className}>{children}</GlobalLayout>
     </html>
   );
 }

@@ -1,1 +1,3 @@
-export * from "./global";
+import { GlobalLayout } from "./ui/Global";
+
+export { GlobalLayout };
